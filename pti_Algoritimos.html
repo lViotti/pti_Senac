@@ -8,19 +8,30 @@
 </head>
 <body>
     <script>
-        var preco_gasolina, preco_etanol;
+        var pergunta, preco_gasolina, preco_etanol, calculadora;
 
-        preco_gasolina=prompt("Qual o valor do litro da gasolina ?");
-        preco_etanol=prompt("Qual o valor do litro do etanol ?");
-        preco_gasolina=parseInt(preco_gasolina);
-
-        if(preco_etanol < preco_gasolina*0.7){
-            alert("Compensa o abastecimento com etanol.")
-        } else if(preco_etanol > preco_gasolina*0.7){
-            alert("Compensa o abastecimento com gasolina.")
-        } else if(preco_etanol == preco_gasolina*0.7){
-            alert("Tanto faz com qual combustivel abastecer.")
-        }
+        alert("Comparador de preços de combustível");
+        alert("Lembrete: Todos os valores devem utilizar ponto como divisor de casas decimais.");
+        
+        pergunta=confirm("Deseja fazer o teste de qual combustivel abastecer ?");
+            if(pergunta==true);
+            do{
+                preco_gasolina=prompt("Insira o valor do litro da gasolina");
+                preco_etanol=prompt("Insira o valor do litro do etanol");
+                    preco_gasolina=parseInt(preco_gasolina);
+            
+                calculadora=preco_etanol/preco_gasolina;
+                    if(calculadora<0.7){
+                        alert("Compensa o abastecimento com etanol.");
+                    } else if(calculadora>0.7){
+                        alert("Compensa o abastecimento com gasolina.");
+                    } else{
+                        alert("Tanto faz com qual combustível abastecer.");
+                    }
+                repetir=confirm("Deseja calcular novamente ?");
+            } while(repetir==true){
+                alert("Obrigado !");
+            }
 
     </script>
 </body>
