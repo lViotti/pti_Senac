@@ -8,30 +8,33 @@
 </head>
 <body>
     <script>
-        var pergunta, preco_gasolina, preco_etanol, calculadora;
+        var pergunta, preco_gasolina, preco_etanol, calculadora, repetir;
 
         alert("Comparador de preços de combustível");
         alert("Lembrete: Todos os valores devem utilizar ponto como divisor de casas decimais.");
-        
+
         pergunta=confirm("Deseja fazer o teste de qual combustivel abastecer ?");
-            if(pergunta==true);
-            do{
-                preco_gasolina=prompt("Insira o valor do litro da gasolina");
-                preco_etanol=prompt("Insira o valor do litro do etanol");
-                    preco_gasolina=parseInt(preco_gasolina);
-            
-                calculadora=preco_etanol/preco_gasolina;
-                    if(calculadora<0.7){
-                        alert("Compensa o abastecimento com etanol.");
-                    } else if(calculadora>0.7){
-                        alert("Compensa o abastecimento com gasolina.");
-                    } else{
-                        alert("Tanto faz com qual combustível abastecer.");
-                    }
-                repetir=confirm("Deseja calcular novamente ?");
-            } while(repetir==true){
+            if(pergunta==true){
+                do{
+                    preco_gasolina=prompt("Insira o valor do litro da gasolina");
+                    preco_etanol=prompt("Insira o valor do litro do etanol");
+                        preco_gasolina=parseInt(preco_gasolina);
+                
+                    calculadora=preco_etanol/preco_gasolina;
+                        if(calculadora<0.7){
+                            alert("Compensa o abastecimento com etanol.");
+                        } else if(calculadora>0.7){
+                            alert("Compensa o abastecimento com gasolina.");
+                        } else{
+                            alert("Tanto faz com qual combustível abastecer.");
+                        }
+                    repetir=confirm("Deseja calcular novamente ?");
+                } while(repetir==true){
+                    alert("Obrigado !");
+                }
+            }   else {
                 alert("Obrigado !");
-            }
+                }
 
     </script>
 </body>
