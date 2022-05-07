@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTI Algoritimos</title>
+</head>
+<body>
+    <script>
+        var preco_gasolina, preco_etanol;
+
+        preco_gasolina=prompt("Qual o valor do litro da gasolina ?");
+        preco_etanol=prompt("Qual o valor do litro do etanol ?");
+        preco_gasolina=parseInt(preco_gasolina);
+
+        if(preco_etanol < preco_gasolina*0.7){
+            alert("Compensa o abastecimento com etanol.")
+        } else if(preco_etanol > preco_gasolina*0.7){
+            alert("Compensa o abastecimento com gasolina.")
+        } else if(preco_etanol == preco_gasolina*0.7){
+            alert("Tanto faz com qual combustivel abastecer.")
+        }
+
+    </script>
+</body>
+</html>
